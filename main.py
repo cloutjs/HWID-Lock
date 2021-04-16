@@ -6,7 +6,7 @@ import sys
 
 hwid = subprocess.check_output('wmic csproduct get uuid').decode().split('\n')[1].strip()
 
-r = requests.get('https://pastebin.com/(paste)')
+r = requests.get('https://pastebin.com/raw/(paste)')
 
 try:
     if hwid in r.text:
